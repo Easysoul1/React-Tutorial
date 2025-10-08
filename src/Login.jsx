@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
        const [username, setUsername] = useState("");
@@ -23,6 +24,7 @@ const Login = () => {
        };
   return (
     <form action="submit" onSubmit={handleSubmit}>
+      <Link to='/'>Login</Link>
        <div>
          <label htmlFor="username">Username:</label>
          <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />

@@ -1,16 +1,24 @@
-
 import './App.css'
-import Start from './Start'
 import Login from './Login'
-import Profile from './Profile'
+import Home from './pages/Home'
+import About from './pages/About'
+import Service from './pages/Service'
+import { Fragment } from 'react'
+import { BrowserRouter as BrowserRouters } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+
 
 function App() {
 
   return (
     <>
-    <Profile username={"Idris"}/>
-    <Start name={"Easy"} age={18}/>
-    <Login />
+        <BrowserRouters>
+      <Routes>
+        <Route path = "/" element = {<Home/>}/>
+        <Route path = "/About" element = {<About/>}/>
+        <Route path = "/Service" element = {<Service/>}/>
+      </Routes>
+    </BrowserRouters>
     </>
   )
 }
