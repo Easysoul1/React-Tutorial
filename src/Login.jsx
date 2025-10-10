@@ -9,6 +9,8 @@ const Login = () => {
 
        const handleSubmit = (e) => {
          e.preventDefault();
+         console.log(confirmPassword);
+         
          if (password != confirmPassword){
               setError('Password do not match');
               alert(error);
